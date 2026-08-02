@@ -1,0 +1,68 @@
+
+> anshu-nigam-portfolio@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.2s
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1781ms (448 modules)
+ GET /about 200 in 2425ms
+ ✓ Compiled /projects in 497ms (453 modules)
+ GET /projects 200 in 697ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.4s (1408 modules)
+ GET / 200 in 2835ms
+ GET / 200 in 96ms
+ GET /projects 200 in 153ms
+ GET / 200 in 65ms
+ GET /about 200 in 83ms
+ GET / 200 in 66ms
+ GET /about 200 in 77ms
+ GET / 200 in 80ms
+ GET / 200 in 208ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.1s (1411 modules)
+ GET /_next/static/css/app/layout.css?v=1785182990816 404 in 2533ms
+ GET /_next/static/chunks/webpack.js?v=1785182990816 404 in 2566ms
+ GET /_next/static/chunks/main-app.js?v=1785182990816 404 in 2353ms
+ GET /_next/static/chunks/app/page.js 404 in 2340ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 2348ms
+ GET / 200 in 1333ms
+ GET /_next/static/css/app/layout.css?v=1785235034321 404 in 94ms
+ GET /_next/static/chunks/main-app.js?v=1785235034321 404 in 107ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 106ms
+ GET /_next/static/chunks/app/page.js 404 in 104ms
+ GET / 200 in 303ms
+ GET /_next/static/css/app/layout.css?v=1785238270353 404 in 81ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 123ms
+ GET /_next/static/chunks/main-app.js?v=1785238270353 404 in 122ms
+ GET /_next/static/chunks/app/page.js 404 in 121ms
+ ✓ Compiled in 919ms (2617 modules)
+ ✓ Compiled in 332ms (1309 modules)
+ ✓ Compiled in 2.1s (2656 modules)
+ GET / 200 in 947ms
+ GET /about 200 in 73ms
+ GET /projects 200 in 45ms
+ ○ Compiling /robots.txt ...
+ ✓ Compiled /robots.txt in 578ms (1361 modules)
+ GET /robots.txt 200 in 734ms
+ ✓ Compiled /sitemap.xml in 289ms (1364 modules)
+ GET /sitemap.xml 200 in 819ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 13.9s (2880 modules)
+ GET / 500 in 16649ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.2s (2869 modules)
+ GET / 500 in 9445ms
+ GET / 500 in 285ms
+ GET / 500 in 173ms
+ GET / 500 in 3907ms
+ GET / 500 in 391ms
+ GET / 500 in 177ms
+ GET / 500 in 1498ms
+ GET / 500 in 972ms
+ GET / 500 in 53ms
+[?25h

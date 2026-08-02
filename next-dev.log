@@ -1,0 +1,22 @@
+
+> anshu-nigam-portfolio@1.0.0 dev
+> next dev -p 3000
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 11.9s (1446 modules)
+ GET / 200 in 12919ms
+ GET / 200 in 303ms
+ ✓ Compiled in 1673ms (1446 modules)
+ GET / 200 in 1831ms
+ GET / 200 in 165ms
+ GET / 200 in 945ms
+ GET / 200 in 1149ms
+ ✓ Compiled in 6.5s (1425 modules)
+ ✓ Compiled in 2.3s (1425 modules)
+ HEAD / 200 in 433ms
+[?25h
