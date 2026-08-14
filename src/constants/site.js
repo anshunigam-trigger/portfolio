@@ -1,4 +1,4 @@
-﻿export const siteProfile = {
+export const siteProfile = {
   name: "Anshu Nigam",
   role: "AI/ML Engineer · Backend Builder · Product-minded Developer",
   location: "India",
@@ -12,8 +12,8 @@
 };
 
 export const navItems = [
-  { label: "Signal", href: "#hero" },
-  { label: "Work", href: "#work" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
   { label: "AI", href: "#ai" },
   { label: "Backend", href: "#backend" },
   { label: "Data", href: "#data" },

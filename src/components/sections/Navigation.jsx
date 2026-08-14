@@ -5,7 +5,7 @@ import { Download, Menu, X } from "lucide-react";
 import { navItems, siteProfile } from "../../constants/site";
 import { Magnetic } from "../animations/Magnetic";
 
-const sectionHrefs = navItems.map((item) => item.href).filter((href) => href.startsWith("#"));
+const sectionHrefs = ["#hero", ...navItems.map((item) => item.href).filter((href) => href.startsWith("#"))];
 const NAV_OFFSET = 96;
 
 export function Navigation() {

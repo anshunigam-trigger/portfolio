@@ -42,9 +42,9 @@ export function SmoothScrollProvider({ children }) {
       lenis.scrollTo(target, {
         offset: target === 0 ? 0 : -NAV_OFFSET,
         immediate: Boolean(options.immediate),
-        duration: 1.08,
+        duration: 0.82,
         easing: easeOutExpo,
-        lock: true,
+        lock: false,
         force: true,
       });
     };
@@ -73,7 +73,7 @@ export function SmoothScrollProvider({ children }) {
     }
 
     lenis = new Lenis({
-      lerp: 0.085,
+      lerp: 0.13,
       smoothWheel: true,
       syncTouch: true,
       syncTouchLerp: 0.12,

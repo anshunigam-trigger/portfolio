@@ -16,19 +16,19 @@ export function PortfolioExperience({ github }) {
   return (
     <SmoothScrollProvider>
       <AuroraBackground>
-        <Navigation />
-        <main>
-          <HeroSection />
-          <AboutSection />
-          <SkillGalaxy />
-          <ProjectsSection />
-          <AISection />
-          <BackendSection />
-          <DataScienceSection />
-          <CredentialsSection github={github} />
-          <ContactSection />
-        </main>
-        <FooterSection />
+      <Navigation />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillGalaxy />
+        <ProjectsSection />
+        <AISection />
+        <BackendSection />
+        <DataScienceSection />
+        <CredentialsSection github={github} />
+        <ContactSection />
+      </main>
+      <FooterSection />
       </AuroraBackground>
     </SmoothScrollProvider>
   );

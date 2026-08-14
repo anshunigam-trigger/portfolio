@@ -1,5 +1,30 @@
+# dependencies
 node_modules/
+
+# next
 .next/
 out/
+
+# production
+build/
 dist/
+
+# environment
 .env
+.env.local
+.env.production
+
+# logs
+*.log
+*.err.log
+
+# vercel
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
