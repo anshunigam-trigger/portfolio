@@ -20,7 +20,7 @@ const caseStudySections = [
 export default function ProjectsPage() {
   return (
     <main className="subpage">
-      <PageNav current="projects" actionHref="/about" actionLabel="Read profile" />
+      <PageNav current="projects" actionHref="/" actionLabel="Back home" />
 
       <section className="subpage-hero subpage-hero--projects">
         <span>ARCHIVE / 06 SYSTEMS</span>

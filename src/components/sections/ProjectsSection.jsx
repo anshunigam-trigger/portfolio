@@ -8,20 +8,24 @@ import { projects } from "../../constants/site";
 import { Reveal } from "../animations/Reveal";
 import { Magnetic } from "../animations/Magnetic";
 import { SectionLabel } from "../ui/SectionLabel";
+import { ButtonLink } from "../ui/ButtonLink";
 import { ProjectModal } from "./ProjectModal";
+
+const featuredProjects = projects.slice(0, 3);
 
 export function ProjectsSection() {
   const [selected, setSelected] = useState(null);
+
   return (
     <section id="work" className="section-pad projects-section">
       <div className="container">
         <Reveal className="section-heading projects-heading">
           <SectionLabel index="03" label="Selected systems" />
           <h2>From experiments to <em>experiences with teeth.</em></h2>
-          <p><Balancer>Six projects, each treated as a system: the problem, the interface, the architecture, and the proof that it works.</Balancer></p>
+          <p><Balancer>Three featured projects, each treated as a system: the problem, the interface, the architecture, and the proof that it works.</Balancer></p>
         </Reveal>
         <div className="project-stack">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <Reveal key={project.slug} delay={Math.min(index * 0.06, 0.25)}>
               <motion.article className="project-card" style={{ "--accent": project.accent }} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300, damping: 22 }}>
                 <div className="project-card__top"><span>{project.id}</span><span className="project-status"><i />{project.status}</span></div>
@@ -33,6 +37,9 @@ export function ProjectsSection() {
             </Reveal>
           ))}
         </div>
+        <Reveal className="projects-more">
+          <Magnetic><ButtonLink href="/projects" variant="ghost">More projects</ButtonLink></Magnetic>
+        </Reveal>
       </div>
       <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </section>

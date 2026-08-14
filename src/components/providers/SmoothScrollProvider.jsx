@@ -75,11 +75,9 @@ export function SmoothScrollProvider({ children }) {
     lenis = new Lenis({
       lerp: 0.13,
       smoothWheel: true,
-      syncTouch: true,
-      syncTouchLerp: 0.12,
-      touchInertiaExponent: 1.45,
-      wheelMultiplier: 0.82,
-      touchMultiplier: 1.05,
+      syncTouch: false,
+      wheelMultiplier: 1,
+      touchMultiplier: 1,
       overscroll: false,
     });
 

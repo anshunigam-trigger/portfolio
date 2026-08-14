@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 import dynamic from "next/dynamic";
 import Balancer from "react-wrap-balancer";
-import { Download, Mail, Play } from "lucide-react";
+import { Download, Mail, Play, UserRound } from "lucide-react";
 import { motion } from "framer-motion";
 import { siteProfile, metrics } from "../../constants/site";
 import { ButtonLink } from "../ui/ButtonLink";
@@ -41,6 +41,7 @@ export function HeroSection() {
           </motion.p>
           <motion.div className="hero-actions" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.82 }}>
             <Magnetic><ButtonLink href="#work">Explore work</ButtonLink></Magnetic>
+            <Magnetic><ButtonLink href="/about" variant="ghost"><UserRound size={15} /> About me</ButtonLink></Magnetic>
             <Magnetic><ButtonLink href={siteProfile.resume} download variant="ghost"><Download size={15} /> Resume</ButtonLink></Magnetic>
             <div className="hero-socials">
               <a href={siteProfile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub size={18} /></a>

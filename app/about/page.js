@@ -22,7 +22,7 @@ const principles = [
 export default function AboutPage() {
   return (
     <main className="subpage">
-      <PageNav current="about" actionHref="/projects" actionLabel="Explore projects" />
+      <PageNav current="about" actionHref="/" actionLabel="Back home" />
 
       <section className="subpage-hero subpage-hero--about">
         <span>PROFILE / 01</span>
