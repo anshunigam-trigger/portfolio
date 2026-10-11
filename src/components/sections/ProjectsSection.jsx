@@ -33,7 +33,7 @@ export function ProjectsSection() {
                   <div className="case-study-grid">
                     <section><span>Problem</span><p>{project.problem}</p></section>
                     <section><span>What I built</span><p>{project.built}</p></section>
-                    <section><span>Result</span><p>{project.result}</p><small>{isTodo(project.resultBaseline) ? "Baseline pending documentation." : project.resultBaseline}</small></section>
+                    <section><span>Result</span><p>{isTodo(project.result) ? "Measured result pending." : project.result}</p><small>{isTodo(project.resultBaseline) ? "Baseline pending documentation." : project.resultBaseline}</small></section>
                     <section><span>Proof</span><p>{isTodo(project.mediaUrl) ? "Results media pending. The repository and case study links are below." : "Results media is linked below."}</p></section>
                   </div>
                 </div>
