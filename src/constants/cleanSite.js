@@ -9,10 +9,11 @@ export const siteProfile = {
   github: "https://github.com/anshunigam-trigger",
   linkedin: "https://linkedin.com/in/anshu-nigam",
   resume: "/resume.pdf",
-  paperUrl: "TODO: add the HARD-RL paper or arXiv URL",
   headlineWords: ["AI systems", "FastAPI backends", "fog-computing RL"],
   summary: "I build ML systems with explainability, FastAPI backends, and a fog-computing RL paper under review at IJACSA.",
 };
+
+export const paperUrl = featuredProjects[0].paperUrl;
 
 export const navItems = [
   { label: "Projects", href: "#work" },
@@ -39,7 +40,7 @@ export const research = {
   status: "Paper submitted to IJACSA, under review",
   summary: "A Q-learning load balancer for fog computing with fuzzy gating, adaptive rewards, and energy-aware epsilon decay.",
   chartUrl: "TODO: add the results chart URL",
-  paperUrl: siteProfile.paperUrl,
+  paperUrl,
 };
 
 export const problemSolving = {

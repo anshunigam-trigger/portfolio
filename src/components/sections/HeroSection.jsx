@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Balancer from "react-wrap-balancer";
 import { BookOpen, FileText, Mail, UserRound } from "lucide-react";
 import { motion } from "framer-motion";
-import { siteProfile, stats } from "../../constants/cleanSite";
+import { paperUrl, siteProfile, stats } from "../../constants/cleanSite";
 import { isTodo } from "../../../data/projects";
 import { ButtonLink } from "../ui/ButtonLink";
 import { Magnetic } from "../animations/Magnetic";
@@ -33,7 +33,7 @@ export function HeroSection() {
             <a href={siteProfile.resume} target="_blank" rel="noopener noreferrer"><FileText size={14} /> Resume</a>
             <a href={siteProfile.github} target="_blank" rel="noopener noreferrer"><FaGithub size={14} /> GitHub</a>
             <a href={siteProfile.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={14} /> LinkedIn</a>
-            {isTodo(siteProfile.paperUrl) ? <span><BookOpen size={14} /> Research paper under review</span> : <a href={siteProfile.paperUrl} target="_blank" rel="noopener noreferrer"><BookOpen size={14} /> Paper: HARD-RL</a>}
+            {isTodo(paperUrl) ? <span><BookOpen size={14} /> Research paper under review</span> : <a href={paperUrl} target="_blank" rel="noopener noreferrer"><BookOpen size={14} /> Paper: HARD-RL</a>}
           </nav>
           <motion.p className="hero-headline" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.52 }}>
             <Balancer>{siteProfile.role}</Balancer>
