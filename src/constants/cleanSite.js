@@ -16,10 +16,10 @@ export const siteProfile = {
 export const paperUrl = featuredProjects[0].paperUrl;
 
 export const navItems = [
-  { label: "Projects", href: "#work" },
-  { label: "Experience", href: "#experience" },
-  { label: "Research", href: "#research" },
-  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "AI", href: "#ai" },
+  { label: "Backend", href: "#backend" },
+  { label: "Data", href: "#data" },
   { label: "Contact", href: "#contact" },
 ];
 
