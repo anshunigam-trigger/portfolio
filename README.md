@@ -1,343 +1,90 @@
-<div align="center">
+# Anshu Nigam portfolio
 
-# ⚡ Anshu Nigam Portfolio
+[![CI](https://github.com/anshunigam-trigger/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/anshunigam-trigger/portfolio/actions/workflows/ci.yml)
 
-### Modern • Interactive • High Performance • Next.js 14 Portfolio
+![Portfolio screenshot](docs/portfolio-desktop.png)
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&pause=1200&color=00F7FF&center=true&vCenter=true&width=850&lines=Software+Engineer+Portfolio;Built+with+Next.js+14;Modern+UI+%2B+Smooth+Animations;Performance+Optimized;Responsive+Across+All+Devices" />
-</p>
+This is Anshu Nigam's recruiter-focused portfolio for SWE and AI/ML internship applications. It presents three evidence-led projects, a lightweight animated background, a proof strip for resume and profiles, and static project case-study pages.
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwindcss)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+## What exists
 
-</div>
+- Recruiter-first hero with target role, proof links, and three server-rendered metrics.
+- HARD-RL, fraud detection, and AutoBench case studies ordered from `data/projects.js`.
+- Dedicated static routes at `/projects/[id]` with problem, approach, results, tradeoffs, and links.
+- Reduced-motion-aware particle field and no 3D scene or Three.js runtime.
+- Mailto contact flow with prefilled subject and message.
+- Open Graph image, canonical metadata, JSON-LD Person schema, sitemap, and robots routes.
 
----
+## Stack
 
-# 🚀 Overview
+Versions below come from `package.json`.
 
-This repository contains my personal developer portfolio built with **Next.js 14**.
-
-The goal of this project is to create a premium, interactive portfolio that reflects my software engineering journey while demonstrating modern frontend development practices.
-
-Instead of using a traditional portfolio layout, this project focuses on storytelling through immersive UI, terminal-inspired animations, layered architecture visualization, and a clean user experience.
-
-The website showcases:
-
-- Professional profile
-- Technical skills
-- Featured projects
-- Education
-- Contact information
-- GitHub & LinkedIn
-- Interactive animations
-- Responsive design
-
----
-
-# ✨ Key Features
-
-## 🎬 Interactive Hero
-
-A cinematic terminal-inspired boot sequence that introduces the portfolio.
-
----
-
-## 🌌 Animated Background
-
-Dynamic animated network rendered using HTML Canvas.
-
-No external animation libraries are required.
-
----
-
-## 📂 Project Showcase
-
-Projects are displayed as an experiment log rather than simple cards.
-
-Each project includes
-
-- Description
-- Technology Stack
-- GitHub
-- Live Demo
-- Highlights
-
----
-
-## 🧠 Layered Tech Stack
-
-Technology stack presented as an engineering architecture diagram instead of a basic icon grid.
-
----
-
-## 📱 Responsive Design
-
-Optimized for
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
----
-
-## ⚡ Performance
-
-- Fast page loads
-- Optimized assets
-- Server Components
-- SEO Friendly
-- Accessible UI
-
----
-
-# 🛠 Technology Stack
-
-| Category | Technologies |
-|----------|--------------|
-| Framework | Next.js 14 |
-| Library | React |
-| Styling | Tailwind CSS |
-| Language | JavaScript |
-| Icons | Lucide React |
-| Fonts | Space Grotesk, Inter, JetBrains Mono |
+| Area | Version or package |
+| --- | --- |
+| Framework | Next.js 16.2.12 |
+| UI | React 19.2.8, React DOM 19.2.8 |
+| Styling | Tailwind CSS 3.4.4, global CSS |
+| Motion | Framer Motion 12.42.2, Lenis 1.3.25 |
+| Icons | Lucide React 1.28.0, React Icons 5.7.0 |
+| Fonts | Inter, Space Grotesk, JetBrains Mono via Fontsource |
 | Deployment | Vercel |
 
----
-
-# 📁 Project Structure
+## Structure
 
 ```text
-portfolio/
-│
-├── app/
-│   ├── layout.js              # Root layout and metadata
-│   ├── page.js                # Main application page
-│   └── globals.css            # Global styles
-│
-├── components/
-│   ├── Hero.js                # Terminal boot hero
-│   ├── About.js               # About section
-│   ├── Skills.js              # Tech stack visualization
-│   ├── Projects.js            # Project listing
-│   ├── ProjectCard.js         # Individual project card
-│   ├── Contact.js             # Contact section
-│   ├── StatusBar.js           # Live status metrics
-│   └── NetworkCanvas.js       # Animated canvas background
-│
-├── data/
-│   └── projects.js            # All portfolio content
-│
-├── public/
-│   ├── images/
-│   ├── icons/
-│   └── preview.png
-│
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── next.config.mjs
-├── tailwind.config.js
-├── postcss.config.mjs
-├── eslint.config.mjs
-└── README.md
+app/
+  layout.js                 metadata, JSON-LD, fonts, shell
+  page.js                   home route
+  projects/page.js          project listing
+  projects/[id]/page.js     static case-study routes
+  opengraph-image.jsx       1200 x 630 generated social image
+src/components/
+  sections/                 hero, projects, research, about, contact, proof
+  experience/               background motion and particle field
+  animations/               small client animation helpers
+data/projects.js            project, stat, and TODO-safe content source
+public/resume.pdf           resume asset
+scripts/                    encoding and data checks
 ```
 
----
-
-# 📚 Folder Explanation
-
-## app/
-
-Contains the routing system and page structure used by Next.js App Router.
-
----
-
-## components/
-
-Contains reusable UI components used throughout the application.
-
-Each component is responsible for rendering a specific section of the portfolio.
-
----
-
-## data/
-
-Acts as a lightweight CMS.
-
-All project information, technologies, metrics, and content are stored here, making updates easy without modifying UI components.
-
----
-
-## public/
-
-Stores static assets such as
-
-- Images
-- Icons
-- Logos
-- Preview screenshots
-- Favicons
-
----
-
-# 🚀 Getting Started
-
-Clone the repository
+## Run locally
 
 ```bash
-git clone https://github.com/anshunigam-trigger/portfolio.git
-```
-
-Navigate into the project
-
-```bash
-cd portfolio
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run development server
-
-```bash
+npm ci
 npm run dev
 ```
 
-Open
+Open `http://localhost:3000`.
 
-```
-http://localhost:3000
-```
+Useful checks:
 
----
-
-# 🎨 Customization
-
-All project information is centralized inside
-
-```
-data/projects.js
+```bash
+npm test
+npm run lint
+npm run build
 ```
 
-Update this file to modify
+## Edit portfolio content
 
-- Projects
-- Skills
-- Metrics
-- Technologies
-- Timeline
+Project fields, proof URLs, result baselines, and hero stats live in [`data/projects.js`](data/projects.js). Unknown facts are literal `TODO:` values and are hidden by the UI. Fill the corresponding checklist in [`TODO_FOR_ANSHU.md`](TODO_FOR_ANSHU.md) before publishing claims.
 
-without touching UI components.
+## Deployment
 
----
+The deployed site is [portfolio-self-xi-73.vercel.app](https://portfolio-self-xi-73.vercel.app). Deploy the `portfolio-recruiter-upgrade` branch as a preview, then merge only after the CI workflow passes.
 
-# 🎨 Theme Customization
+## Lighthouse results
 
-The entire color palette is controlled through
+| Viewport | Performance | Accessibility | Best Practices | SEO |
+| --- | --- | --- | --- | --- |
+| Mobile | TODO: run Lighthouse | TODO: run Lighthouse | TODO: run Lighthouse | TODO: run Lighthouse |
 
-```
-tailwind.config.js
-```
+## Future improvements
 
-You can easily modify
+- Add the real project repository, demo, media, paper, and baseline URLs listed in `TODO_FOR_ANSHU.md`.
+- Add verified experience and problem-solving data when available.
 
-- Background
-- Accent colors
-- Cards
-- Borders
-- Text colors
+## Contact
 
----
-
-# 🌍 Deployment
-
-Deploy effortlessly using **Vercel**.
-
-```text
-1. Push repository to GitHub
-
-2. Import repository into Vercel
-
-3. Click Deploy
-
-4. Done ✅
-```
-
-No additional configuration required.
-
----
-
-# 📈 Performance Goals
-
-✅ Lighthouse 95+
-
-✅ SEO Optimized
-
-✅ Responsive
-
-✅ Accessible
-
-✅ Optimized Images
-
-✅ Fast Initial Load
-
-✅ Smooth Animations
-
----
-
-# 🔮 Future Improvements
-
-- Blog System
-
-- Dark / Light Mode
-
-- Command Palette
-
-- AI Chat Assistant
-
-- Interactive Resume
-
-- Project Filtering
-
-- Multi-language Support
-
-- Analytics Dashboard
-
----
-
-# 🤝 Connect With Me
-
-GitHub
-
-> https://github.com/anshunigam-trigger
-
-LinkedIn
-
-> Add your LinkedIn profile
-
-Portfolio
-
-> Add your deployed Vercel URL
-
-Email
-
-> your-email@example.com
-
----
-
-<div align="center">
-
-### ⭐ If you found this project interesting, consider giving it a Star!
-
-Built with ❤️ using **Next.js 14**, **React**, and **Tailwind CSS**.
-
-</div>
+- Email: [nigamanshu188@gmail.com](mailto:nigamanshu188@gmail.com)
+- GitHub: [anshunigam-trigger](https://github.com/anshunigam-trigger)
+- LinkedIn: [anshu-nigam](https://linkedin.com/in/anshu-nigam)

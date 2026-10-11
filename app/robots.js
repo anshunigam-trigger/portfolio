@@ -1,4 +1,4 @@
-﻿export default function robots() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://anshunigam.dev";
+export default function robots() {
+  const baseUrl = "https://portfolio-self-xi-73.vercel.app";
   return { rules: { userAgent: "*", allow: "/" }, sitemap: `${baseUrl}/sitemap.xml` };
 }

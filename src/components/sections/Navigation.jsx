@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Download, Menu, X } from "lucide-react";
-import { navItems, siteProfile } from "../../constants/site";
+import { navItems, siteProfile } from "../../constants/cleanSite";
 import { Magnetic } from "../animations/Magnetic";
 
 const sectionHrefs = ["#hero", ...navItems.map((item) => item.href).filter((href) => href.startsWith("#"))];
@@ -81,14 +81,14 @@ export function Navigation() {
           {navItems.map((item) => <a key={item.href} href={item.href} className={`nav-link ${activeHref === item.href ? "is-active" : ""}`} aria-current={activeHref === item.href ? "page" : undefined} onClick={(event) => handleNavClick(event, item.href)}>{item.label}</a>)}
         </div>
         <Magnetic className="nav-resume-wrap">
-          <a href={siteProfile.resume} download className="nav-resume" data-cursor="interactive"><Download size={14} /> Resume</a>
+          <a href={siteProfile.resume} target="_blank" rel="noopener noreferrer" download className="nav-resume" data-cursor="interactive"><Download size={14} /> Resume</a>
         </Magnetic>
         <button type="button" className="nav-toggle" onClick={() => setOpen((value) => !value)} aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open}>{open ? <X size={18} /> : <Menu size={18} />}</button>
       </nav>
       {open && (
         <div className="mobile-nav" aria-label="Mobile navigation">
           {navItems.map((item) => <a key={item.href} href={item.href} className={`nav-link ${activeHref === item.href ? "is-active" : ""}`} aria-current={activeHref === item.href ? "page" : undefined} onClick={(event) => handleNavClick(event, item.href)}>{item.label}</a>)}
-          <a href={siteProfile.resume} download onClick={() => setOpen(false)}>Resume</a>
+          <a href={siteProfile.resume} target="_blank" rel="noopener noreferrer" download onClick={() => setOpen(false)}>Resume</a>
         </div>
       )}
     </header>

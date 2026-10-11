@@ -21,6 +21,10 @@ dist/
 # vercel
 .vercel
 
+# verification output
+verification-*.png
+screenshots/
+
 # OS
 .DS_Store
 Thumbs.db
