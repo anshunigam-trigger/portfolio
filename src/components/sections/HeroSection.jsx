@@ -53,7 +53,7 @@ export function HeroSection() {
             {stats.filter((metric) => !isTodo(metric.value)).map((metric) => (
               <div key={metric.label}>
                 <strong><AnimatedCounter value={metric.value} suffix={metric.suffix} /></strong>
-                <span>{metric.label}</span>
+                <span>{metric.label}<small>{metric.caption}</small></span>
               </div>
             ))}
           </div>
