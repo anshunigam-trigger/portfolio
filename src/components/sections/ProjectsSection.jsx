@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, ExternalLink, Layers3, Plus } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { featuredProjects } from "../../constants/cleanSite";
@@ -28,10 +29,11 @@ export function ProjectsSection() {
                 <div className="project-card__body">
                   <span className="eyebrow">{project.tagline}</span>
                   <h3>{project.title}</h3>
+                  {!isTodo(project.mediaUrl) && <Image className="project-card__media" src={project.mediaUrl} alt={`${project.title} proof`} width={1200} height={675} loading="lazy" />}
                   <div className="case-study-grid">
                     <section><span>Problem</span><p>{project.problem}</p></section>
                     <section><span>What I built</span><p>{project.built}</p></section>
-                    <section><span>Result</span><p>{project.result}</p></section>
+                    <section><span>Result</span><p>{project.result}</p><small>{isTodo(project.resultBaseline) ? "Baseline pending documentation." : project.resultBaseline}</small></section>
                     <section><span>Proof</span><p>{isTodo(project.mediaUrl) ? "Results media pending. The repository and case study links are below." : "Results media is linked below."}</p></section>
                   </div>
                 </div>
