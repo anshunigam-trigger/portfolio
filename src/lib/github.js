@@ -15,7 +15,7 @@ export async function getGitHubSnapshot() {
       followers: profile.followers || 0,
       stars: repositories.reduce((total, repository) => total + (repository.stargazers_count || 0), 0),
       updatedAt: profile.updated_at || null,
-      repos: repositories.slice(0, 4).map((repository) => ({ name: repository.name, language: repository.language, stars: repository.stargazers_count || 0 })),
+      repos: repositories.slice(0, 4).map((repository) => ({ name: repository.name, language: repository.language, description: repository.description, html_url: repository.html_url, stars: repository.stargazers_count || 0 })),
     };
   } catch {
     return null;

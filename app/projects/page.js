@@ -1,75 +1,22 @@
-import { FaGithub } from "react-icons/fa";
-import { ArrowUpRight, CircleDot, GitBranch, Layers3 } from "lucide-react";
+import { ArrowUpRight, ExternalLink, FileText } from "lucide-react";
+import { featuredProjects } from "../../src/constants/cleanSite";
+import { isTodo } from "../../data/projects";
 import { PageNav } from "../../src/components/PageNav";
-import { projects } from "../../src/constants/site";
 
-export const metadata = {
-  title: "Projects",
-  description: "Detailed AI/ML, backend, research, and product projects by Anshu Nigam.",
-};
-
-const caseStudySections = [
-  ["Problem", "problem"],
-  ["Research", "research"],
-  ["Product surface", "frontend"],
-  ["System design", "backend"],
-  ["Intelligence", "ai"],
-  ["What it taught me", "lessons"],
-];
+export const metadata = { title: "Projects", description: "Evidence-led AI/ML and backend projects by Anshu Nigam." };
 
 export default function ProjectsPage() {
   return (
     <main className="subpage">
       <PageNav current="projects" actionHref="/" actionLabel="Back home" />
-
-      <section className="subpage-hero subpage-hero--projects">
-        <span>ARCHIVE / 06 SYSTEMS</span>
-        <h1>Project work, with <em>the full thinking included.</em></h1>
-        <p>Each project begins as a practical question and becomes a deliberate system — architecture, interaction, and a measurable outcome included.</p>
-      </section>
-
-      <section className="archive-summary" aria-label="Project archive summary">
-        <article><Layers3 size={18} /><strong>06 systems</strong><span>AI, backend, research, and realtime product work</span></article>
-        <article><GitBranch size={18} /><strong>End-to-end lens</strong><span>Problem framing through architecture and interface</span></article>
-        <article><CircleDot size={18} /><strong>Evidence-led</strong><span>Metrics and specific lessons beside each build</span></article>
-      </section>
-
-      <section className="project-dossiers" aria-label="Detailed project case studies">
-        {projects.map((project, index) => (
-          <article className="project-dossier" key={project.slug} style={{ "--accent": project.accent }}>
-            <header className="project-dossier__header">
-              <span>{String(index + 1).padStart(2, "0")} / {project.id}</span>
-              <i><b /> {project.status}</i>
-            </header>
-            <div className="project-dossier__lead">
-              <div>
-                <span className="eyebrow">{project.eyebrow}</span>
-                <h2>{project.name}</h2>
-                <p>{project.blurb}</p>
-              </div>
-              <strong>{project.metric}</strong>
-            </div>
-
-            <div className="project-dossier__body">
-              <section className="dossier-architecture">
-                <span>ARCHITECTURE TRACE</span>
-                <ol>
-                  {project.architecture.map((step, stepIndex) => <li key={step}><i>{String(stepIndex + 1).padStart(2, "0")}</i>{step}</li>)}
-                </ol>
-              </section>
-              <dl className="dossier-details">
-                {caseStudySections.map(([label, key]) => (
-                  <div key={key}><dt>{label}</dt><dd>{project.caseStudy[key]}</dd></div>
-                ))}
-              </dl>
-            </div>
-
-            <footer className="project-dossier__footer">
-              <div>{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-              <a href={project.links.github} target="_blank" rel="noreferrer">View source <FaGithub size={15} /><ArrowUpRight size={14} /></a>
-            </footer>
-          </article>
-        ))}
+      <section className="subpage-hero"><span>PROJECTS / CASE STUDIES</span><h1>Project work, with <em>the proof attached.</em></h1><p>Three projects organized around the problem, the build, the result, and the next piece of evidence to publish.</p></section>
+      <section className="project-dossiers" aria-label="Project case studies">
+        {featuredProjects.map((project) => <article className="project-dossier" key={project.id}>
+          <header className="project-dossier__header"><span>{String(project.order).padStart(2, "0")}</span><i>{project.status}</i></header>
+          <div className="project-dossier__lead"><div><span className="eyebrow">{project.tagline}</span><h2>{project.title}</h2></div><strong>{project.resultMetric.startsWith("TODO:") ? "Result pending" : project.resultMetric}</strong></div>
+          <div className="project-dossier__body"><div className="dossier-details"><div><dt>Problem</dt><dd>{project.problem}</dd></div><div><dt>What I built</dt><dd>{project.built}</dd></div><div><dt>Result</dt><dd>{project.result}</dd></div><div><dt>Baseline</dt><dd>{isTodo(project.resultBaseline) ? "Baseline pending documentation." : project.resultBaseline}</dd></div></div></div>
+          <footer className="project-dossier__footer"><div>{project.stack.map((item) => <span key={item}>{item}</span>)}</div><div className="project-link-row"><a href={project.caseStudyUrl}>Case study <ArrowUpRight size={14} /></a>{!isTodo(project.repoUrl) && <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">Repo <ExternalLink size={14} /></a>}{!isTodo(project.demoUrl) && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">Live demo <ExternalLink size={14} /></a>}{!isTodo(project.paperUrl) && <a href={project.paperUrl} target="_blank" rel="noopener noreferrer">Paper <FileText size={14} /></a>}</div></footer>
+        </article>)}
       </section>
     </main>
   );
