@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useRef } from "react";
+import { ParticleField } from "./ParticleField";
 
 export function AuroraBackground({ children }) {
   const ref = useRef(null);
@@ -14,5 +15,5 @@ export function AuroraBackground({ children }) {
     window.addEventListener("pointermove", move, { passive: true });
     return () => window.removeEventListener("pointermove", move);
   }, []);
-  return <div ref={ref} className="site-shell"><div className="aurora-bg" aria-hidden="true"><div className="aurora-bg__orb aurora-bg__orb--a" /><div className="aurora-bg__orb aurora-bg__orb--b" /><div className="aurora-bg__orb aurora-bg__orb--c" /><div className="aurora-bg__grid" /><div className="aurora-bg__spotlight" /></div>{children}</div>;
+  return <div ref={ref} className="site-shell"><div className="aurora-bg" aria-hidden="true"><ParticleField /><div className="aurora-bg__orb aurora-bg__orb--a" /><div className="aurora-bg__orb aurora-bg__orb--b" /><div className="aurora-bg__orb aurora-bg__orb--c" /><div className="aurora-bg__grid" /><div className="aurora-bg__spotlight" /></div>{children}</div>;
 }
