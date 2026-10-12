@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       </section>
 
       <section className="archive-summary" aria-label="Project archive summary">
-        <article><Layers3 size={18} /><strong>{featuredProjects.length} documented builds</strong><span>Research, deployed ML, and a full-stack AutoML platform</span></article>
+        <article><Layers3 size={18} /><strong>{featuredProjects.length} documented builds</strong><span>Research, applied ML, product interfaces, and backend experiments</span></article>
         <article><GitBranch size={18} /><strong>End-to-end lens</strong><span>Problem framing through model behavior, APIs, and interface</span></article>
         <article><CircleDot size={18} /><strong>Evidence-led</strong><span>Results are paired with baselines or marked for follow-up</span></article>
       </section>

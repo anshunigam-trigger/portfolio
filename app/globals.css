@@ -200,6 +200,7 @@ html.lenis, html.lenis body { height:auto; }
 @media (max-width:800px) { .subpage-nav { grid-template-columns:1fr auto; }.subpage-nav nav { order:3; grid-column:1/-1; justify-self:start; margin-top:.55rem; }.subpage-nav__action { grid-column:2; grid-row:1; }.profile-snapshot,.archive-summary,.profile-section,.profile-section--split,.project-dossier__body { grid-template-columns:1fr; }.profile-section { gap:2rem; margin-top:4rem; }.profile-section--split { gap:3.5rem; }.project-dossier__lead { grid-template-columns:1fr; gap:1rem; padding:3.5rem 0 1.6rem; }.project-dossier__lead > strong { max-width:max-content; }.dossier-architecture ol { grid-template-columns:repeat(2,1fr); }.subpage-closing { margin-top:4rem; } }
 @media (max-width:550px) { .subpage { padding-inline:16px; }.subpage-hero { padding:6rem 0 3.5rem; }.profile-snapshot,.archive-summary { grid-template-columns:1fr; }.profile-snapshot article { min-height:0; }.skill-groups,.dossier-details { grid-template-columns:1fr; }.dossier-architecture ol { grid-template-columns:1fr; }.project-dossier { padding:1.05rem; }.project-dossier__footer { align-items:flex-start; flex-direction:column; }.subpage-closing { padding:1.4rem; } }
 .projects-more { display:flex; justify-content:center; margin-top:2rem; }
+.project-stack > div:nth-child(n+7) { grid-column:span 6; }
 
 /* Final footer layout overrides keep the new footer lockup intact on small screens. */
 .footer-inner { grid-template-columns:minmax(230px,1.25fr) auto auto auto; align-items:start; }
