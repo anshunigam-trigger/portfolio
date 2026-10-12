@@ -99,6 +99,7 @@ html.lenis, html.lenis body { height:auto; }
 .hero-radial { background:radial-gradient(circle at 68% 48%,transparent 0 24%,rgba(5,6,9,.12) 48%,rgba(5,6,9,.62) 100%); }
 .particle-field { z-index:0; opacity:.7; }
 .hero-name { overflow:visible; line-height:.92; padding-bottom:.08em; }
+.hero-name { font-family:var(--body); font-weight:650; font-feature-settings:"cv11" 0,"ss01" 0; }
 
 /* Modern ambient motion: layered light, depth rings, and a slow technical scan. */
 .aurora-bg__mesh { position:absolute; z-index:1; inset:-24%; background:conic-gradient(from 125deg at 48% 42%,transparent 0deg,rgba(102,227,255,.1) 70deg,transparent 142deg,rgba(139,92,255,.1) 220deg,transparent 300deg); filter:blur(28px); opacity:.58; animation:meshDrift 26s ease-in-out infinite alternate; }
