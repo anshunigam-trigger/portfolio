@@ -8,7 +8,7 @@ export const stats = [
   { id: "mnist-cnn-accuracy", label: "MNIST CNN accuracy", value: "98.93", suffix: "%", caption: "CNN benchmark result", source: "MNIST CNN" },
   { id: "fraud-auc", label: "Fraud detection AUC", value: "0.99", suffix: "", caption: "ULB credit-card dataset", source: "credit-card-fraud-detection" },
   { id: "fog-failed-allocations", label: "Fog-RL failed allocations", value: "98.29", suffix: "% reduction", caption: "Baseline comparison is pending", source: "hard-rl-fog-load-balancer" },
-  { id: "cgpa", label: "Current CGPA", value: "TODO: confirm exact value from resume", caption: "Academic record", source: "education" },
+  { id: "cgpa", label: "Current CGPA", value: "8.34", suffix: "", caption: "Academic record", source: "education" },
 ];
 
 export const projects = [

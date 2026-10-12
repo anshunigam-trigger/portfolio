@@ -3,7 +3,7 @@
 import { ArrowUpRight, ExternalLink, Layers3, Plus } from "lucide-react";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
-import { featuredProjects } from "../../constants/cleanSite";
+import { mainProjects } from "../../constants/cleanSite";
 import { Reveal } from "../animations/Reveal";
 import { Magnetic } from "../animations/Magnetic";
 import { SectionLabel } from "../ui/SectionLabel";
@@ -21,7 +21,7 @@ export function ProjectsSection() {
           <p><Balancer>Three featured projects, each treated as a system: the problem, the interface, the architecture, and the proof that it works.</Balancer></p>
         </Reveal>
         <div className="project-stack">
-          {featuredProjects.map((project, index) => (
+          {mainProjects.map((project, index) => (
             <Reveal key={project.id} delay={Math.min(index * 0.06, 0.25)}>
               <SpotlightCard as={motion.article} className="project-card" style={{ "--accent": ["#00f5d4", "#8b5cff", "#66e3ff"][index] }} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300, damping: 22 }}>
                 <div className="project-card__top"><span>{project.order.toString().padStart(2, "0")}</span><span className="project-status"><i />{project.status}</span></div>

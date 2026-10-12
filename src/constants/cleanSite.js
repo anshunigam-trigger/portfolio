@@ -14,6 +14,7 @@ export const siteProfile = {
 };
 
 export const paperUrl = featuredProjects[0].paperUrl;
+export const mainProjects = featuredProjects.slice(0, 3);
 
 export const navItems = [
   { label: "Projects", href: "#work" },

@@ -2,10 +2,6 @@
 
 These placeholders are stored in `data/projects.js` and are hidden from the public page until filled.
 
-## Education
-
-- Confirm the exact CGPA from the resume. The current site value was `8.52`, but the source facts require confirmation.
-
 ## HARD-RL Fog Load Balancer
 
 - Name the baseline used for the `98.29% reduction in failed allocations` result.

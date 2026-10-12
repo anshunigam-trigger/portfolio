@@ -98,7 +98,7 @@ html.lenis, html.lenis body { height:auto; }
 .hero-section { background:radial-gradient(circle at 75% 34%,rgba(102,227,255,.1),transparent 28%),rgba(5,6,9,.24); }
 .hero-radial { background:radial-gradient(circle at 68% 48%,transparent 0 24%,rgba(5,6,9,.12) 48%,rgba(5,6,9,.62) 100%); }
 .particle-field { z-index:0; opacity:.7; }
-.hero-name { overflow:visible; line-height:.92; padding-bottom:.08em; }
+.hero-name { overflow:visible; white-space:nowrap; line-height:.92; padding-bottom:.08em; font-size:clamp(2.6rem,8.2vw,8.6rem); letter-spacing:-.06em; }
 .hero-name { font-family:var(--body); font-weight:650; font-feature-settings:"cv11" 0,"ss01" 0; }
 
 /* Modern ambient motion: layered light, depth rings, and a slow technical scan. */
