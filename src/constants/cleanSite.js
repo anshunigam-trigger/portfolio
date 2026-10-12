@@ -17,6 +17,8 @@ export const paperUrl = featuredProjects[0].paperUrl;
 
 export const navItems = [
   { label: "Projects", href: "#work" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "AI", href: "#ai" },
   { label: "Backend", href: "#backend" },
   { label: "Contact", href: "#contact" },

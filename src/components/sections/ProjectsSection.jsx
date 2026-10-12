@@ -8,6 +8,7 @@ import { Reveal } from "../animations/Reveal";
 import { Magnetic } from "../animations/Magnetic";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ButtonLink } from "../ui/ButtonLink";
+import { SpotlightCard } from "../ui/SpotlightCard";
 
 export function ProjectsSection() {
   return (
@@ -21,13 +22,13 @@ export function ProjectsSection() {
         <div className="project-stack">
           {featuredProjects.map((project, index) => (
             <Reveal key={project.id} delay={Math.min(index * 0.06, 0.25)}>
-              <motion.article className="project-card" style={{ "--accent": ["#00f5d4", "#8b5cff", "#66e3ff"][index] }} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300, damping: 22 }}>
+              <SpotlightCard as={motion.article} className="project-card" style={{ "--accent": ["#00f5d4", "#8b5cff", "#66e3ff"][index] }} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300, damping: 22 }}>
                 <div className="project-card__top"><span>{project.order.toString().padStart(2, "0")}</span><span className="project-status"><i />{project.status}</span></div>
                 <div className="project-machine" aria-hidden="true"><div className="machine-grid" /><div className="machine-orb" /><div className="machine-panel"><span /><span /><span /></div><div className="machine-line machine-line--one" /><div className="machine-line machine-line--two" /></div>
                 <div className="project-card__body"><span className="eyebrow">{project.tagline}</span><h3>{project.title}</h3><p>{project.problem}</p><strong>{project.resultMetric.startsWith("TODO:") ? "Result pending" : project.resultMetric}</strong></div>
                 <footer className="project-card__footer"><div>{project.stack.slice(0, 3).map((item) => <span key={item}>{item}</span>)}</div><Magnetic><a href={project.caseStudyUrl} aria-label={`Open ${project.title} case study`}>Case study <Plus size={16} /></a></Magnetic></footer>
                 <a className="project-repo" href={project.caseStudyUrl} aria-label={`Open ${project.title} case study`}><Layers3 size={16} /><ArrowUpRight size={15} /></a>
-              </motion.article>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>
