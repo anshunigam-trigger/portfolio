@@ -40,6 +40,7 @@ export function HeroSection() {
             <Magnetic><ButtonLink href="#work">Explore work</ButtonLink></Magnetic>
             <Magnetic><ButtonLink href="/about" variant="ghost"><UserRound size={15} /> About me</ButtonLink></Magnetic>
             <Magnetic><ButtonLink href={siteProfile.resume} target="_blank" rel="noopener noreferrer" download variant="ghost"><Download size={15} /> Resume</ButtonLink></Magnetic>
+            <Magnetic><ButtonLink href={siteProfile.aiMlResume} target="_blank" rel="noopener noreferrer" download variant="ghost"><Download size={15} /> AI/ML resume</ButtonLink></Magnetic>
             <a className="hero-email" href={`mailto:${siteProfile.email}`}><Mail size={15} /> Email</a>
           </motion.div>
         </div>

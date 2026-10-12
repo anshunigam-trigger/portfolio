@@ -26,6 +26,7 @@ export default function AboutPage() {
         <p>{siteProfile.summary} My work connects applied machine learning, backend systems, and clear interfaces.</p>
         <div className="subpage-actions">
           <a href={siteProfile.resume} target="_blank" rel="noopener noreferrer"><Download size={15} /> Resume</a>
+          <a href={siteProfile.aiMlResume} target="_blank" rel="noopener noreferrer"><Download size={15} /> AI/ML resume</a>
           <a href={siteProfile.github} target="_blank" rel="noopener noreferrer"><ArrowUpRight size={15} /> GitHub</a>
           <a href={siteProfile.linkedin} target="_blank" rel="noopener noreferrer"><ArrowUpRight size={15} /> LinkedIn</a>
           <a href={`mailto:${siteProfile.email}`}><Mail size={15} /> Email</a>

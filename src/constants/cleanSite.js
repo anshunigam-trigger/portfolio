@@ -9,6 +9,7 @@ export const siteProfile = {
   github: "https://github.com/anshunigam-trigger",
   linkedin: "https://linkedin.com/in/anshu-nigam",
   resume: "/resume.pdf",
+  aiMlResume: "/ai-ml-resume.pdf",
   headlineWords: ["AI systems", "FastAPI backends", "fog-computing RL"],
   summary: "I build ML systems with explainability, FastAPI backends, and a fog-computing RL paper under review at IJACSA.",
 };
