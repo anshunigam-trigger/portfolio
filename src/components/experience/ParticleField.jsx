@@ -10,7 +10,7 @@ export function ParticleField() {
     if (!canvas) return undefined;
     const context = canvas.getContext("2d");
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const points = Array.from({ length: 28 }, (_, index) => ({ x: (index * 37) % 100, y: (index * 61) % 100, dx: ((index % 3) - 1) * 0.012, dy: ((index % 5) - 2) * 0.009 }));
+    const points = Array.from({ length: 36 }, (_, index) => ({ x: (index * 37) % 100, y: (index * 61) % 100, dx: ((index % 3) - 1) * 0.012, dy: ((index % 5) - 2) * 0.009 }));
     let frame = 0;
     let last = 0;
 
@@ -28,8 +28,10 @@ export function ParticleField() {
       for (const point of points) {
         const x = (point.x / 100) * width;
         const y = (point.y / 100) * height;
-        context.fillStyle = "rgba(102,227,255,0.34)";
-        context.fillRect(x, y, 1.5, 1.5);
+        context.fillStyle = "rgba(151,237,255,0.55)";
+        context.beginPath();
+        context.arc(x, y, 1.45, 0, Math.PI * 2);
+        context.fill();
       }
       for (let index = 0; index < points.length; index += 1) {
         for (let next = index + 1; next < points.length; next += 1) {
@@ -38,7 +40,7 @@ export function ParticleField() {
           const dx = ((a.x - b.x) / 100) * width;
           const dy = ((a.y - b.y) / 100) * height;
           if (Math.hypot(dx, dy) > Math.min(width, height) * 0.22) continue;
-          context.strokeStyle = "rgba(102,227,255,0.08)";
+          context.strokeStyle = "rgba(102,227,255,0.11)";
           context.beginPath();
           context.moveTo((a.x / 100) * width, (a.y / 100) * height);
           context.lineTo((b.x / 100) * width, (b.y / 100) * height);

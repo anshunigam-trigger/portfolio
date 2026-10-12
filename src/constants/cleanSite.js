@@ -2,7 +2,7 @@ import { featuredProjects, stats } from "../../data/projects";
 
 export const siteProfile = {
   name: "Anshu Nigam",
-  role: "AI/ML Engineer \\u00b7 Backend Builder",
+  role: "AI/ML Engineer \u00b7 Backend Builder",
   target: "3rd-year CSE student \\u00b7 Seeking SWE / AI-ML internships",
   location: "Kolkata, India",
   email: "nigamanshu188@gmail.com",
@@ -16,10 +16,9 @@ export const siteProfile = {
 export const paperUrl = featuredProjects[0].paperUrl;
 
 export const navItems = [
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#work" },
   { label: "AI", href: "#ai" },
   { label: "Backend", href: "#backend" },
-  { label: "Data", href: "#data" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -49,4 +48,3 @@ export const problemSolving = {
   contestRating: "TODO: add contest rating",
 };
 
-export const githubStats = [];
