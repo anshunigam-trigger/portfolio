@@ -33,7 +33,7 @@ export function ContactSection() {
     <section id="contact" className="section-pad contact-section" aria-labelledby="contact-heading">
       <div className="container contact-grid">
         <Reveal className="section-heading contact-copy">
-          <SectionLabel index="07" label="Open channel" />
+          <SectionLabel index="06" label="Open channel" />
           <h2 id="contact-heading">For SWE and AI/ML internship conversations.</h2>
           <p><Balancer>Send a short note with the role, project, or technical problem you want to discuss.</Balancer></p>
           <div className="contact-email-actions">

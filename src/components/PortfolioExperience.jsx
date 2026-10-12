@@ -7,12 +7,10 @@ import { SkillGalaxy } from "./sections/SkillGalaxy";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { AISection } from "./sections/AISection";
 import { BackendSection } from "./sections/BackendSection";
-import { DataScienceSection } from "./sections/DataScienceSection";
-import { CredentialsSection } from "./sections/CredentialsSection";
 import { ContactSection } from "./sections/ContactSection";
 import { FooterSection } from "./sections/FooterSection";
 
-export function PortfolioExperience({ github }) {
+export function PortfolioExperience() {
   return (
     <AuroraBackground>
       <Navigation />
@@ -23,8 +21,6 @@ export function PortfolioExperience({ github }) {
         <ProjectsSection />
         <AISection />
         <BackendSection />
-        <DataScienceSection />
-        <CredentialsSection github={github} />
         <ContactSection />
       </main>
       <FooterSection />

@@ -15,5 +15,5 @@ export function AuroraBackground({ children }) {
     window.addEventListener("pointermove", move, { passive: true });
     return () => window.removeEventListener("pointermove", move);
   }, []);
-  return <div ref={ref} className="site-shell"><div className="aurora-bg" aria-hidden="true"><ParticleField /><div className="aurora-bg__orb aurora-bg__orb--a" /><div className="aurora-bg__orb aurora-bg__orb--b" /><div className="aurora-bg__orb aurora-bg__orb--c" /><div className="aurora-bg__grid" /><div className="aurora-bg__spotlight" /></div>{children}</div>;
+  return <div ref={ref} className="site-shell"><div className="aurora-bg" aria-hidden="true"><ParticleField /><div className="aurora-bg__orb aurora-bg__orb--a" /><div className="aurora-bg__orb aurora-bg__orb--b" /><div className="aurora-bg__orb aurora-bg__orb--c" /><div className="aurora-bg__mesh" /><div className="aurora-bg__halo aurora-bg__halo--a" /><div className="aurora-bg__halo aurora-bg__halo--b" /><div className="aurora-bg__grid" /><div className="aurora-bg__scanlines" /><div className="aurora-bg__spotlight" /></div>{children}</div>;
 }

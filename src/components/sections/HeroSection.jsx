@@ -10,6 +10,7 @@ import { isTodo } from "../../../data/projects";
 import { ButtonLink } from "../ui/ButtonLink";
 import { Magnetic } from "../animations/Magnetic";
 import { AnimatedCounter } from "../animations/AnimatedCounter";
+import { SpotlightCard } from "../ui/SpotlightCard";
 
 const letters = siteProfile.name.split("");
 
@@ -39,10 +40,11 @@ export function HeroSection() {
             <Magnetic><ButtonLink href="#work">Explore work</ButtonLink></Magnetic>
             <Magnetic><ButtonLink href="/about" variant="ghost"><UserRound size={15} /> About me</ButtonLink></Magnetic>
             <Magnetic><ButtonLink href={siteProfile.resume} target="_blank" rel="noopener noreferrer" download variant="ghost"><Download size={15} /> Resume</ButtonLink></Magnetic>
+            <Magnetic><ButtonLink href={siteProfile.aiMlResume} target="_blank" rel="noopener noreferrer" download variant="ghost"><Download size={15} /> AI/ML resume</ButtonLink></Magnetic>
             <a className="hero-email" href={`mailto:${siteProfile.email}`}><Mail size={15} /> Email</a>
           </motion.div>
         </div>
-        <motion.aside className="hero-console glass-border" initial={{ opacity: 0, x: 34, rotateY: -10 }} animate={{ opacity: 1, x: 0, rotateY: 0 }} transition={{ duration: 0.9, delay: 0.58, ease: [0.16, 1, 0.3, 1] }}>
+        <SpotlightCard as={motion.aside} className="hero-console glass-border" initial={{ opacity: 0, x: 34, rotateY: -10 }} animate={{ opacity: 1, x: 0, rotateY: 0 }} transition={{ duration: 0.9, delay: 0.58, ease: [0.16, 1, 0.3, 1] }}>
           <div className="console-top"><span>live capability signal</span><Play size={13} /></div>
           <div className="console-metrics">
             {stats.filter((metric) => !isTodo(metric.value)).map((metric) => (
@@ -55,7 +57,7 @@ export function HeroSection() {
           <div className="console-stream" aria-hidden="true">
             {siteProfile.headlineWords.map((word, index) => <span key={word} style={{ "--i": index }}>{word}</span>)}
           </div>
-        </motion.aside>
+        </SpotlightCard>
       </div>
     </section>
   );

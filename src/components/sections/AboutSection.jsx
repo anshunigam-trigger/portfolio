@@ -1,6 +1,6 @@
 import { ArrowDownRight, Cpu, MapPin, Sparkles } from "lucide-react";
 import Balancer from "react-wrap-balancer";
-import { featuredProjects, siteProfile, skills } from "../../constants/cleanSite";
+import { mainProjects, siteProfile, skills } from "../../constants/cleanSite";
 import { AnimatedCounter } from "../animations/AnimatedCounter";
 import { Reveal } from "../animations/Reveal";
 import { SectionLabel } from "../ui/SectionLabel";
@@ -23,7 +23,7 @@ export function AboutSection() {
           </div>
         </div>
         <Reveal delay={0.2} className="proof-grid">
-          <div className="proof-item"><strong><AnimatedCounter value={String(featuredProjects.length)} suffix="" /></strong><span>featured projects</span></div>
+          <div className="proof-item"><strong><AnimatedCounter value={String(mainProjects.length)} suffix="" /></strong><span>main projects</span></div>
           <div className="proof-item"><strong><AnimatedCounter value={String(Object.keys(skills).length)} suffix="" /></strong><span>skill groups</span></div>
           <div className="proof-item"><strong><AnimatedCounter value="3" suffix="" /></strong><span>proof metrics</span></div>
         </Reveal>
